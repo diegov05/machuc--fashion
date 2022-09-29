@@ -5,21 +5,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/languageSelector.css">
+
   <title>Machucá Fashion</title>
 </head>
 
 <body>
   <header>
-    <div class="top-nav"></div>
-    <nav></nav>
+    <div class="top-nav">
+      <div class="language-picker js-language-picker" data-trigger-class="li4-btn li4-btn--subtle js-tab-focus">
+        <form action="" class="language-picker__form">
+          <label for="language-picker-select">Select your language</label>
+
+          <select name="language-picker-select" id="language-picker-select">
+            <option lang="en" value="english" selected>EN</option>
+            <option lang="fr" value="francais">FR</option>
+          </select>
+        </form>
+      </div>
+      <img src="../../assets/resources/cart-white.png" alt="cart" class="cart-image">
+    </div>
+    <nav>
+      <div class="menu-element" id="menu-element"><a href="#shop">SHOP</a>
+      </div>
+      <div class="menu-element" id="menu-element"><a href="#"><img src="../../assets/logo/logo-white.png" alt="logo"
+            class="logo" id="logo"></a>
+      </div>
+      <div class="menu-element" id="menu-element"><a href="#shop">ABOUT</a></div>
+    </nav>
   </header>
   <main>
-    <section></section>
+    <section>
+
+    </section>
   </main>
   <footer>
     <div class="newsletter"></div>
     <div class="contact"></div>
   </footer>
+  <script src="../js/languageSelector.js"></script>
+  <script src="../js/jquery-3.6.1.min.js"></script>
+  <script src="../js/script.js"></script>\
 </body>
 
 </html>
