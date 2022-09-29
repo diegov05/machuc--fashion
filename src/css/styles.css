@@ -33,14 +33,54 @@ body {
   cursor: pointer;
 }
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: white;
-  margin: 0em 20em;
+}
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  transition: 300ms;
+}
+.nav-grid .menu-element {
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+}
+nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 nav .menu-element {
-  font-size: 24px;
+  padding: 3em;
+  transition: 300ms;
+}
+nav #shop,
+nav #menu-logo,
+nav #about {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+nav #shop,
+nav #about {
+  padding: 8em 8em !important;
+}
+nav .menu-element-background img {
+  display: block;
+  width: 800px;
+  position: absolute;
+  z-index: -1;
+  filter: grayscale(100%);
+  opacity: 0;
+  transition: 300ms;
+}
+
+nav .menu-element:hover:not([data-attr="img"]) {
+  background-color: white;
+}
+
+nav .menu-element {
+  cursor: pointer;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 nav .menu-element a {
@@ -49,4 +89,7 @@ nav .menu-element a {
 nav .logo {
   width: 258px;
   height: 250px;
+}
+.slide-in-fwd-center {
+  animation: slide-in-fwd-center 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
