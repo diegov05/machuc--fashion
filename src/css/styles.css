@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+.hide {
+  display: none;
+}
+
+* {
+  font-family: "Montserrat";
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+body .top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body .top-nav .cart-image {
+  width: 38px;
+  height: 38px;
+}
+body nav {
+  color: white;
+}
+body nav .nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  transition: 300ms;
+}
+body nav .nav-grid .menu-element {
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+}
+body nav .two-column-grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  transition: 300ms;
+}
+body nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body nav .menu-element {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0;
+  transition: 300ms;
+}
+body nav .menu-element .spread-text {
+  letter-spacing: 0.59em;
+}
+body nav .menu-element a {
+  color: white;
+}
+body nav #shop,
+body nav #menu-logo,
+body nav #about {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+body nav #shop,
+body nav #about {
+  padding: 1em 1em !important;
+}
+body nav .menu-element-background .opaque-background-img {
+  opacity: 10%;
+}
+body nav .menu-element-background .big-img {
+  transform: scale(2);
+}
+body nav .menu-element-background img {
+  display: block;
+  width: 800px;
+  position: absolute;
+  z-index: -1;
+  filter: grayscale(100%);
+  opacity: 0;
+  transition: 300ms;
+}
+body nav .menu-element:hover:not([data-attr=img]) {
+  background-color: white;
+}
+body nav .logo {
+  width: 258px;
+  height: 250px;
+}
+body section .wrapper .grid {
+  height: 1867px;
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+}
+body section .wrapper .grid .bg-1 {
+  width: 100%;
+  background: url("../../assets/resources/Backgrounds/huseyin-kilic-EnHT2ydAuiE-unsplash.jpg");
+}
+body section .wrapper .grid .bg-2 {
+  width: 100%;
+  background: url("../../assets/resources/Backgrounds/philipp-arlt-NmH9A0obon8-unsplash.jpg");
+}/*# sourceMappingURL=styles.css.map */
