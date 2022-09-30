@@ -45,10 +45,14 @@ $(function () {
 $(function () {
   $("#shop").hover(
     function () {
-      $("#shop .menu-element-background img").css("opacity", "10%");
+      $("#shop .menu-element-background img").toggleClass(
+        "opaque-background-img"
+      );
     },
     function () {
-      $("#shop .menu-element-background img").css("opacity", "1%");
+      $("#shop .menu-element-background img").toggleClass(
+        "opaque-background-img"
+      );
     }
   );
 });
@@ -56,40 +60,44 @@ $(function () {
 $(function () {
   $("#about").hover(
     function () {
-      $("#about .menu-element-background img").css("opacity", "10%");
+      $("#about .menu-element-background img").toggleClass(
+        "opaque-background-img"
+      );
     },
     function () {
-      $("#about .menu-element-background img").css("opacity", "1%");
+      $("#about .menu-element-background img").toggleClass(
+        "opaque-background-img"
+      );
     }
   );
 });
 
-// $(function () {
-//   $("#shop").hover(
-//     function () {
-//       $(".nav-grid").css("grid-template-columns", "2fr 1fr");
-//       $("#menu-logo").css("display", "none");
-//       $(".menu-element-background img").css("transform", "scale(2)");
-//     },
-//     function () {
-//       $(".nav-grid").css("grid-template-columns", "repeat(3, 1fr)");
-//       $("#menu-logo").css("display", "block");
-//       $(".menu-element-background img").css("transform", "scale(0)");
-//     }
-//   );
-// });
+$(function () {
+  $("#shop").hover(
+    function () {
+      $(".nav-grid").toggleClass("two-column-grid");
+      $("#menu-logo").toggleClass("hide");
+      $(".menu-element-background img").toggleClass("big-img");
+    },
+    function () {
+      $(".nav-grid").toggleClass("two-column-grid");
+      $("#menu-logo").toggleClass("hide");
+      $(".menu-element-background img").toggleClass("big-img");
+    }
+  );
+});
 
-// $(function () {
-//   $("#about").hover(
-//     function () {
-//       $(".nav-grid").css("grid-template-columns", "1fr 2fr");
-//       $("#menu-logo").css("display", "none");
-//       $(".menu-element-background img").css("transform", "scale(2)");
-//     },
-//     function () {
-//       $(".nav-grid").css("grid-template-columns", "repeat(3, 1fr)");
-//       $("#menu-logo").css("display", "block");
-//       $(".menu-element-background img").css("transform", "scale(0)");
-//     }
-//   );
-// });
+$(function () {
+  $("#about").hover(
+    function () {
+      $(".nav-grid").toggleClass("two-column-grid");
+      $("#menu-logo").toggleClass("hide");
+      $(".menu-element-background img").toggleClass("big-img");
+    },
+    function () {
+      $(".nav-grid").toggleClass("two-column-grid");
+      $("#menu-logo").toggleClass("hide");
+      $(".menu-element-background img").toggleClass("big-img");
+    }
+  );
+});
