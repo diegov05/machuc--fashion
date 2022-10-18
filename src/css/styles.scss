@@ -14,12 +14,14 @@ body {
   background-size: cover;
 
   header {
+    transition: 300ms;
     .top-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       line-height: 4em;
       margin: 0em 2em;
+
       .title {
         -webkit-user-select: none; /* Safari */
         -moz-user-select: none; /* Firefox */
@@ -44,11 +46,12 @@ body {
       justify-content: center;
       align-items: center;
       line-height: 2em;
+
       ul {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        padding: 0px 35px;
+        padding: 0px 35px 2em 0;
         gap: 60px;
         list-style: none;
 
@@ -61,6 +64,35 @@ body {
             text-decoration: none;
             letter-spacing: 0.29em;
           }
+        }
+      }
+    }
+  }
+  header:hover {
+    background-color: white;
+  }
+  main {
+    .explore-section {
+      margin: 25em 0 0 0;
+      display: flex;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+
+      .explorer-button {
+        .explorer-link {
+          color: #cecece;
+          text-decoration: none;
+          font-size: 40px;
+          font-family: $main-font;
+          letter-spacing: 0.28em;
+          padding: 0.3em 1em;
+          border: 1px solid #cecece;
+          transition: 300ms;
+        }
+        .explorer-link:hover {
+          background: white;
+          color: black;
         }
       }
     }

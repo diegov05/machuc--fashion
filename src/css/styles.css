@@ -9,6 +9,9 @@ body {
   background: url("../../assets/resources/Backgrounds/0.jpg");
   background-size: cover;
 }
+body header {
+  transition: 300ms;
+}
 body header .top-nav {
   display: flex;
   justify-content: space-between;
@@ -44,7 +47,7 @@ body header nav ul {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0px 35px;
+  padding: 0px 35px 2em 0;
   gap: 60px;
   list-style: none;
 }
@@ -55,4 +58,28 @@ body header nav ul li a {
   color: #cecece;
   text-decoration: none;
   letter-spacing: 0.29em;
+}
+body header:hover {
+  background-color: white;
+}
+body main .explore-section {
+  margin: 25em 0 0 0;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+body main .explore-section .explorer-button .explorer-link {
+  color: #cecece;
+  text-decoration: none;
+  font-size: 40px;
+  font-family: "Bodoni Moda", serif;
+  letter-spacing: 0.28em;
+  padding: 0.3em 1em;
+  border: 1px solid #cecece;
+  transition: 300ms;
+}
+body main .explore-section .explorer-button .explorer-link:hover {
+  background: white;
+  color: black;
 }/*# sourceMappingURL=styles.css.map */
