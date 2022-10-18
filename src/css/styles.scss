@@ -1,1 +1,68 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800&family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+
+$main-font: "Bodoni Moda", serif;
+$secondary-font: "Montserrat", sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  background: url("../../assets/resources/Backgrounds/0.jpg");
+  background-size: cover;
+
+  header {
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      line-height: 4em;
+      margin: 0em 2em;
+      .title {
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        color: #cfcfcf;
+        letter-spacing: 0.705em;
+        font-weight: 400;
+        font-size: 20px;
+      }
+      .language-selector div,
+      .filler {
+        color: #a7a7a7;
+        font-family: $main-font;
+        font-size: 15px;
+      }
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 2em;
+      ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px 35px;
+        gap: 60px;
+        list-style: none;
+
+        li {
+          a {
+            font-family: $main-font;
+            font-weight: 400;
+            font-size: 15px;
+            color: #cecece;
+            text-decoration: none;
+            letter-spacing: 0.29em;
+          }
+        }
+      }
+    }
+  }
+}
