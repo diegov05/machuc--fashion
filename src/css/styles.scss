@@ -6,15 +6,28 @@ $secondary-font: "Montserrat", sans-serif;
 * {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 body {
+  overflow-x: hidden;
   width: 100vw;
   background: url("../../assets/resources/Backgrounds/0.jpg");
-  background-size: cover;
+  background-size: contain;
 
+  .wrapper {
+    height: 100vh;
+    overflow: hidden;
+  }
   header {
     transition: 300ms;
+
     .top-nav {
       display: flex;
       justify-content: space-between;
@@ -72,27 +85,426 @@ body {
     background-color: white;
   }
   main {
-    .explore-section {
-      margin: 25em 0 0 0;
+    #collection-du-soleil {
       display: flex;
+      gap: 2em;
+      flex-direction: column;
+      margin: 29em 0 0 0;
       width: 100vw;
       justify-content: center;
       align-items: center;
 
-      .explorer-button {
-        .explorer-link {
-          color: #cecece;
-          text-decoration: none;
-          font-size: 40px;
-          font-family: $main-font;
-          letter-spacing: 0.28em;
-          padding: 0.3em 1em;
-          border: 1px solid #cecece;
-          transition: 300ms;
+      .title {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-family: $secondary-font;
+        h4 {
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.705em;
         }
-        .explorer-link:hover {
-          background: white;
-          color: black;
+        h2 {
+          font-weight: 700;
+          font-size: 40px;
+          letter-spacing: 0.745em;
+        }
+      }
+      .acheter-button {
+        div {
+          a {
+            font-size: 24px;
+            text-decoration: none;
+            font-family: $secondary-font;
+            color: white;
+            letter-spacing: 0.28em;
+            border: 1px solid white;
+            border-radius: 2em;
+            padding: 0.8em 1.8em;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
+            transition: 300ms;
+          }
+          a:hover {
+            color: black;
+            background-color: white;
+          }
+        }
+      }
+    }
+    #automne-fashion {
+      box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      height: 115vh;
+      background: url(../../assets/resources/Backgrounds/1.jpg);
+      background-size: cover;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      width: 100vw;
+
+      position: relative;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        margin: 0 0 7em 0;
+        color: white;
+        font-family: $secondary-font;
+        h4 {
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.705em;
+        }
+        h2 {
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 40px;
+          letter-spacing: 0.745em;
+        }
+      }
+      .acheter-button {
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 3em 0;
+
+        div {
+          a {
+            font-size: 24px;
+            text-decoration: none;
+            font-family: $secondary-font;
+            color: white;
+            letter-spacing: 0.28em;
+            border: 1px solid white;
+            border-radius: 2em;
+            padding: 0.8em 1.8em;
+            // -webkit-backdrop-filter: blur(10px);
+            // backdrop-filter: blur(15px);
+            transition: 300ms;
+          }
+          a:hover {
+            color: black;
+            background-color: white;
+          }
+        }
+      }
+    }
+    #collection-de-luxe {
+      box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      height: 115vh;
+      background: url(../../assets/resources/Backgrounds/2.jpg);
+      background-size: cover;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      width: 100vw;
+
+      position: relative;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 7em 0;
+        color: white;
+        font-family: $secondary-font;
+        h4 {
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.705em;
+        }
+        h2 {
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 40px;
+          letter-spacing: 0.745em;
+        }
+      }
+      .acheter-button {
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 3em 0;
+
+        div {
+          a {
+            font-size: 24px;
+            text-decoration: none;
+            font-family: $secondary-font;
+            color: white;
+            letter-spacing: 0.28em;
+            border: 1px solid white;
+            border-radius: 2em;
+            padding: 0.8em 1.8em;
+            // -webkit-backdrop-filter: blur(10px);
+            // backdrop-filter: blur(15px);
+            transition: 300ms;
+          }
+          a:hover {
+            color: black;
+            background-color: white;
+          }
+        }
+      }
+    }
+    #reve-de-mode {
+      box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      height: 115vh;
+      background: url(../../assets/resources/Backgrounds/3.jpg);
+      background-size: cover;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      width: 100vw;
+
+      position: relative;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        margin: 0 0 7em 0;
+        color: white;
+        font-family: $secondary-font;
+        h4 {
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.705em;
+        }
+        h2 {
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 40px;
+          letter-spacing: 0.745em;
+        }
+      }
+      .acheter-button {
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 3em 0;
+
+        div {
+          a {
+            font-size: 24px;
+            text-decoration: none;
+            font-family: $secondary-font;
+            color: white;
+            letter-spacing: 0.28em;
+            border: 1px solid white;
+            border-radius: 2em;
+            padding: 0.8em 1.8em;
+            // -webkit-backdrop-filter: blur(10px);
+            // backdrop-filter: blur(15px);
+            transition: 300ms;
+          }
+          a:hover {
+            color: black;
+            background-color: white;
+          }
+        }
+      }
+    }
+    #les-bijoux {
+      box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      height: 115vh;
+      background: url(../../assets/resources/Backgrounds/4.jpg);
+      background-size: cover;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      width: 100vw;
+
+      position: relative;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 7em 0;
+        color: white;
+        font-family: $secondary-font;
+        h4 {
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.705em;
+        }
+        h2 {
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 40px;
+          letter-spacing: 0.745em;
+        }
+      }
+      .acheter-button {
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 3em 0;
+
+        div {
+          a {
+            font-size: 24px;
+            text-decoration: none;
+            font-family: $secondary-font;
+            color: white;
+            letter-spacing: 0.28em;
+            border: 1px solid white;
+            border-radius: 2em;
+            padding: 0.8em 1.8em;
+            // -webkit-backdrop-filter: blur(10px);
+            // backdrop-filter: blur(15px);
+            transition: 300ms;
+          }
+          a:hover {
+            color: black;
+            background-color: white;
+          }
+        }
+      }
+    }
+    #parfums-d-automne {
+      box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      height: 115vh;
+      background: url(../../assets/resources/Backgrounds/5.jpg);
+      background-size: cover;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      width: 100vw;
+
+      position: relative;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 7em 0;
+        color: white;
+        font-family: $secondary-font;
+        h4 {
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.705em;
+        }
+        h2 {
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 40px;
+          letter-spacing: 0.745em;
+        }
+      }
+      .acheter-button {
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 3em 0;
+
+        div {
+          a {
+            font-size: 24px;
+            text-decoration: none;
+            font-family: $secondary-font;
+            color: white;
+            letter-spacing: 0.28em;
+            border: 1px solid white;
+            border-radius: 2em;
+            padding: 0.8em 1.8em;
+            // -webkit-backdrop-filter: blur(10px);
+            // backdrop-filter: blur(15px);
+            transition: 300ms;
+          }
+          a:hover {
+            color: black;
+            background-color: white;
+          }
+        }
+      }
+    }
+    #automne-fashion {
+      box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      height: 115vh;
+      background: url(../../assets/resources/Backgrounds/1.jpg);
+      background-size: cover;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      width: 100vw;
+
+      position: relative;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 7em 0;
+        color: white;
+        font-family: $secondary-font;
+        h4 {
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.705em;
+        }
+        h2 {
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 40px;
+          letter-spacing: 0.745em;
+        }
+      }
+      .acheter-button {
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 3em 0;
+
+        div {
+          a {
+            font-size: 24px;
+            text-decoration: none;
+            font-family: $secondary-font;
+            color: white;
+            letter-spacing: 0.28em;
+            border: 1px solid white;
+            border-radius: 2em;
+            padding: 0.8em 1.8em;
+            // -webkit-backdrop-filter: blur(10px);
+            // backdrop-filter: blur(15px);
+            transition: 300ms;
+          }
+          a:hover {
+            color: black;
+            background-color: white;
+          }
         }
       }
     }

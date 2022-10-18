@@ -2,12 +2,24 @@
 * {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 body {
+  overflow-x: hidden;
   width: 100vw;
   background: url("../../assets/resources/Backgrounds/0.jpg");
-  background-size: cover;
+  background-size: contain;
+}
+body .wrapper {
+  height: 100vh;
+  overflow: hidden;
 }
 body header {
   transition: 300ms;
@@ -62,24 +74,373 @@ body header nav ul li a {
 body header:hover {
   background-color: white;
 }
-body main .explore-section {
-  margin: 25em 0 0 0;
+body main #collection-du-soleil {
   display: flex;
+  gap: 2em;
+  flex-direction: column;
+  margin: 29em 0 0 0;
   width: 100vw;
   justify-content: center;
   align-items: center;
 }
-body main .explore-section .explorer-button .explorer-link {
-  color: #cecece;
-  text-decoration: none;
+body main #collection-du-soleil .title {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+body main #collection-du-soleil .title h4 {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.705em;
+}
+body main #collection-du-soleil .title h2 {
+  font-weight: 700;
   font-size: 40px;
-  font-family: "Bodoni Moda", serif;
+  letter-spacing: 0.745em;
+}
+body main #collection-du-soleil .acheter-button div a {
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
   letter-spacing: 0.28em;
-  padding: 0.3em 1em;
-  border: 1px solid #cecece;
+  border: 1px solid white;
+  border-radius: 2em;
+  padding: 0.8em 1.8em;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   transition: 300ms;
 }
-body main .explore-section .explorer-button .explorer-link:hover {
-  background: white;
+body main #collection-du-soleil .acheter-button div a:hover {
   color: black;
+  background-color: white;
+}
+body main #automne-fashion {
+  box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: 115vh;
+  background: url(../../assets/resources/Backgrounds/1.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 100vw;
+  position: relative;
+}
+body main #automne-fashion .title {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  margin: 0 0 7em 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+body main #automne-fashion .title h4 {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.705em;
+}
+body main #automne-fashion .title h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 0.745em;
+}
+body main #automne-fashion .acheter-button {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 3em 0;
+}
+body main #automne-fashion .acheter-button div a {
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  letter-spacing: 0.28em;
+  border: 1px solid white;
+  border-radius: 2em;
+  padding: 0.8em 1.8em;
+  transition: 300ms;
+}
+body main #automne-fashion .acheter-button div a:hover {
+  color: black;
+  background-color: white;
+}
+body main #collection-de-luxe {
+  box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: 115vh;
+  background: url(../../assets/resources/Backgrounds/2.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 100vw;
+  position: relative;
+}
+body main #collection-de-luxe .title {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 7em 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+body main #collection-de-luxe .title h4 {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.705em;
+}
+body main #collection-de-luxe .title h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 0.745em;
+}
+body main #collection-de-luxe .acheter-button {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 3em 0;
+}
+body main #collection-de-luxe .acheter-button div a {
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  letter-spacing: 0.28em;
+  border: 1px solid white;
+  border-radius: 2em;
+  padding: 0.8em 1.8em;
+  transition: 300ms;
+}
+body main #collection-de-luxe .acheter-button div a:hover {
+  color: black;
+  background-color: white;
+}
+body main #reve-de-mode {
+  box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: 115vh;
+  background: url(../../assets/resources/Backgrounds/3.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 100vw;
+  position: relative;
+}
+body main #reve-de-mode .title {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  margin: 0 0 7em 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+body main #reve-de-mode .title h4 {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.705em;
+}
+body main #reve-de-mode .title h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 0.745em;
+}
+body main #reve-de-mode .acheter-button {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 3em 0;
+}
+body main #reve-de-mode .acheter-button div a {
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  letter-spacing: 0.28em;
+  border: 1px solid white;
+  border-radius: 2em;
+  padding: 0.8em 1.8em;
+  transition: 300ms;
+}
+body main #reve-de-mode .acheter-button div a:hover {
+  color: black;
+  background-color: white;
+}
+body main #les-bijoux {
+  box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: 115vh;
+  background: url(../../assets/resources/Backgrounds/4.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 100vw;
+  position: relative;
+}
+body main #les-bijoux .title {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 7em 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+body main #les-bijoux .title h4 {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.705em;
+}
+body main #les-bijoux .title h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 0.745em;
+}
+body main #les-bijoux .acheter-button {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 3em 0;
+}
+body main #les-bijoux .acheter-button div a {
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  letter-spacing: 0.28em;
+  border: 1px solid white;
+  border-radius: 2em;
+  padding: 0.8em 1.8em;
+  transition: 300ms;
+}
+body main #les-bijoux .acheter-button div a:hover {
+  color: black;
+  background-color: white;
+}
+body main #parfums-d-automne {
+  box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: 115vh;
+  background: url(../../assets/resources/Backgrounds/5.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 100vw;
+  position: relative;
+}
+body main #parfums-d-automne .title {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 7em 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+body main #parfums-d-automne .title h4 {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.705em;
+}
+body main #parfums-d-automne .title h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 0.745em;
+}
+body main #parfums-d-automne .acheter-button {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 3em 0;
+}
+body main #parfums-d-automne .acheter-button div a {
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  letter-spacing: 0.28em;
+  border: 1px solid white;
+  border-radius: 2em;
+  padding: 0.8em 1.8em;
+  transition: 300ms;
+}
+body main #parfums-d-automne .acheter-button div a:hover {
+  color: black;
+  background-color: white;
+}
+body main #automne-fashion {
+  box-shadow: inset -96px -666px 236px 90px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: 115vh;
+  background: url(../../assets/resources/Backgrounds/1.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 100vw;
+  position: relative;
+}
+body main #automne-fashion .title {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 7em 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+body main #automne-fashion .title h4 {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.705em;
+}
+body main #automne-fashion .title h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 0.745em;
+}
+body main #automne-fashion .acheter-button {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 3em 0;
+}
+body main #automne-fashion .acheter-button div a {
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  letter-spacing: 0.28em;
+  border: 1px solid white;
+  border-radius: 2em;
+  padding: 0.8em 1.8em;
+  transition: 300ms;
+}
+body main #automne-fashion .acheter-button div a:hover {
+  color: black;
+  background-color: white;
 }/*# sourceMappingURL=styles.css.map */
